@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahen Sah J.H. Medicine Center - Quality Pharmacy Services in Chittagong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: #10b981;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1e40af;
+        }
+
+        .cta-button {
+            background: #1e40af;
+            color: white;
+            padding: 0.65rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #1e3a8a;
+        }
+
+        .cta-button-light {
+            background: #10b981;
+        }
+
+        .cta-button-light:hover {
+            background: #059669;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .nav-container {
+                padding: 1rem;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #0f766e 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            flex: 1;
+            min-width: 200px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-feature i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #10b981;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero-features {
+                flex-direction: column;
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f9fafb;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            list-style: none;
+        }
+
+        .about-features li {
+            padding: 0.75rem 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .about-features i {
+            color: #10b981;
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        /* Doctor Section */
+        .doctor-section {
+            background: #f0f9ff;
+        }
+
+        .doctor-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .doctor-header {
+            background: linear-gradient(135deg, #1e40af 0%, #10b981 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .doctor-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 3rem;
+            color: #1e40af;
+        }
+
+        .doctor-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .doctor-title {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+        }
+
+        .doctor-details {
+            padding: 2rem;
+        }
+
+        .doctor-bio {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .doctor-info {
+            background: #f3f4f6;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .doctor-info-label {
+            color: #6b7280;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .doctor-info-value {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .consultation-fee {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .fee-box {
+            background: #f9fafb;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid #10b981;
+        }
+
+        .fee-label {
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        .fee-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        .booking-button {
+            width: 100%;
+            padding: 1rem;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .booking-button:hover {
+            background: #059669;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #1f2937;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-box i {
+            font-size: 1.5rem;
+            color: #10b981;
+            margin-top: 0.25rem;
+            min-width: 24px;
+        }
+
+        .contact-box h3 {
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .contact-box p {
+            color: #d1d5db;
+        }
+
+        .contact-box a {
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Location Section */
+        .location {
+            background: #f9fafb;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .location-map {
+            background: #e5e7eb;
+            border-radius: 8px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+        }
+
+        .location-info h3 {
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .location-details {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-details p {
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .hours-table th,
+        .hours-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .hours-table th {
+            background: #f3f4f6;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .hours-table td {
+            color: #4b5563;
+        }
+
+        @media (max-width: 768px) {
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+            .location-map {
+                height: 250px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            color: #9ca3af;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 1rem;
+        }
+
+        .mt-4 {
+            margin-top: 2rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 2.5rem 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-capsules"></i>
+                Sahen Sah
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctor">Doctor</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView()">Book Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Your Health, Our Priority</h1>
+            <p class="hero-subtitle">Quality medications and expert healthcare services in Chittagong</p>
+            
+            <div class="hero-features">
+                <div class="hero-feature fade-in">
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Quality Assured</strong>
+                </div>
+                <div class="hero-feature fade-in">
+                    <i class="fas fa-user-md"></i>
+                    <strong>Expert Consultation</strong>
+                </div>
+                <div class="hero-feature fade-in">
+                    <i class="fas fa-clock"></i>
+                    <strong>Extended Hours</strong>
+                </div>
+            </div>
+
+            <div class="hero-buttons mt-4">
+                <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView()">Call Now</button>
+                <button class="cta-button cta-button-light" onclick="document.getElementById('doctor').scrollIntoView()">Book Doctor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Sahen Sah J.H. Medicine Center</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sahen Sah J.H. Medicine Center is dedicated to providing high-quality pharmaceutical products and exceptional healthcare services to our community. We are committed to promoting health and well-being through reliable medications, expert advice, and a patient-centric approach.</p>
+                    
+                    <p>Our management team focuses on operational excellence, ensuring a seamless experience for every visitor—from inventory availability to the efficiency of our professional pharmaceutical services.</p>
+                    
+                    <ul class="about-features">
+                        <li><i class="fas fa-star"></i> High-quality medications</li>
+                        <li><i class="fas fa-star"></i> Professional healthcare advice</li>
+                        <li><i class="fas fa-star"></i> Resident physician on-site</li>
+                        <li><i class="fas fa-star"></i> Wide range of health products</li>
+                        <li><i class="fas fa-star"></i> Patient-centric approach</li>
+                        <li><i class="fas fa-star"></i> Extended business hours</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div style="background: linear-gradient(135deg, #1e40af 0%, #10b981 100%); height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+                        <div style="text-align: center;">
+                            <i class="fas fa-heartbeat" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                            <p style="font-size: 1.2rem; font-weight: 600;">Trusted by the Community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive healthcare solutions under one roof</p>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <i class="fas fa-prescription-bottle-medical"></i>
+                    <h3>Prescription Dispensing</h3>
+                    <p>Professional prescription filling with expert pharmacist consultation</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <i class="fas fa-pills"></i>
+                    <h3>Over-the-Counter Medications</h3>
+                    <p>Wide selection of OTC medications for common health issues</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Health & Wellness Products</h3>
+                    <p>Vitamins, supplements, and wellness products for optimal health</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <i class="fas fa-heart"></i>
+                    <h3>Personal Care Items</h3>
+                    <p>Quality personal hygiene and care products</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <i class="fas fa-bandage"></i>
+                    <h3>First Aid Supplies</h3>
+                    <p>Complete range of first aid and medical supplies</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <i class="fas fa-flask-vial"></i>
+                    <h3>Specialty Compounding</h3>
+                    <p>Coming soon - Custom pharmaceutical compounding services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Section -->
+    <section class="doctor-section" id="doctor">
+        <div class="container">
+            <h2 class="section-title">Meet Our Doctor</h2>
+            <p class="section-subtitle">Expert consultation from our resident physician</p>
+
+            <div class="doctor-card fade-in">
+                <div class="doctor-header">
+                    <div class="doctor-avatar">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h2 class="doctor-name">Dr. Jashim Uddin</h2>
+                    <p class="doctor-title">L.M.F, R.M.P | Resident Physician</p>
+                </div>
+
+                <div class="doctor-details">
+                    <p class="doctor-bio">Dr. Jashim Uddin is a highly respected physician with extensive experience in general practice, committed to providing personalized and comprehensive medical care to our patients.</p>
+
+                    <div class="doctor-info">
+                        <div class="doctor-info-label">Qualification</div>
+                        <div class="doctor-info-value">L.M.F, R.M.P</div>
+                    </div>
+
+                    <div class="doctor-info">
+                        <div class="doctor-info-label">Specialization</div>
+                        <div class="doctor-info-value">General Practice & Consultation</div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem; color: #1f2937; font-size: 1.1rem;">Consultation Fees</h3>
+                    <div class="consultation-fee">
+                        <div class="fee-box">
+                            <div class="fee-label">Clinic Visit</div>
+                            <div class="fee-amount">100 Tk</div>
+                        </div>
+                        <div class="fee-box">
+                            <div class="fee-label">Home Service</div>
+                            <div class="fee-amount">200 Tk</div>
+                        </div>
+                    </div>
+
+                    <button class="booking-button" onclick="callNumber()">
+                        <i class="fas fa-phone"></i>
+                        Call to Book Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <h2 class="section-title">Location & Hours</h2>
+
+            <div class="location-grid">
+                <div class="location-map">
+                    <div>
+                        <i class="fas fa-map-pin" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p><strong>View Location</strong></p>
+                    </div>
+                </div>
+
+                <div class="location-info">
+                    <div class="location-details">
+                        <p><strong>📍 Address</strong></p>
+                        <p>Solaiman Building (2nd Shop)<br>Harinadighi, Fatickchhari<br>Chittagong</p>
+                    </div>
+
+                    <h3>Business Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <th>Days</th>
+                            <th>Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Saturday - Thursday</td>
+                            <td>9:00 AM - 11:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>Closed</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Contact Us</h2>
+            <p class="section-subtitle" style="color: #d1d5db;">Get in touch with us today</p>
+
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:01812901786">01812901786</a></p>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Available during business hours</p>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:jashimuddin901786@gmail.com">jashimuddin901786@gmail.com</a></p>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">We'll respond within 24 hours</p>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Hours</h3>
+                        <p>Sat - Thu: 9 AM - 11 PM</p>
+                        <p style="color: #9ca3af; font-size: 0.9rem;">Friday Closed</p>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <h3>Visit Us</h3>
+                        <p>Solaiman Building (2nd Shop)<br>Harinadighi, Fatickchhari<br>Chittagong</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <button class="cta-button cta-button-light" onclick="callNumber()" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                    <i class="fas fa-phone"></i> Call Now - 01812901786
+                </button>
+                <p style="margin-top: 1rem; color: #d1d5db;">For doctor appointments or pharmacy inquiries</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sahen Sah J.H. Medicine Center. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Providing Quality Healthcare & Medications Since [Year]</p>
+    </footer>
+
+    <script>
+        function callNumber() {
+            window.location.href = 'tel:01812901786';
+        }
+
+        // Smooth animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .doctor-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
